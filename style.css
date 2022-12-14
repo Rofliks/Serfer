@@ -1,0 +1,84 @@
+.game{
+    height: 550px;
+    width: 1500px;
+    margin: 100px auto;
+    border: 3px solid #000; /* Белая рамка */
+    border-radius: 10px;
+    background-color: #218eb9;
+}
+
+#volna{
+    height: 150px;
+    width: auto;
+    background-image: url(img/volna.png);
+    background-size: 600px auto;
+    position: relative;
+    top: 130px;
+    animation: volnaMov 5s infinite linear;
+}
+
+#person{
+    width: 120px;
+    height: 120px;
+    background-image: url(img/person.png);
+    background-size: 120px 120px;
+    position: relative;
+    top: 200px;
+   
+}
+
+#record{
+    width: 100px;
+    height: 100px;
+    background-size: 100px 100px;
+    position: relative;
+    top: 10px;  
+}
+
+.jump{
+    animation: jump 0.3s linear;
+}
+
+#enemy{
+    width: 100px;
+    height: 100px;
+    background-image: url(img/enemy.png);
+    background-size: 100px 100px;
+    position: relative;
+    top: -30px;
+    left: 1500px;
+    animation: enemyMov 1s infinite linear;
+}
+
+@keyframes enemyMov{
+    0%{
+        left: 1500px;
+    }
+    100%{
+        left: -10px;
+    }
+}
+@keyframes volnaMov{
+    100%{
+        background-position: -2000px 0px;
+    }
+}
+
+@keyframes jump{
+    0%{
+        top: 180px;
+    }
+    30%{
+        top: 50px;
+    }
+    50%{
+        top: 0px;
+    }
+    70%{
+        top: 50px;
+    }
+    100%{
+        top: 180px;
+    }
+    
+}
